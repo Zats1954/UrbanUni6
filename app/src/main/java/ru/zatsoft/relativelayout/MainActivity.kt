@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val source = database()
         val spisok = loadBook(source.text)
-        spisok.forEach { println(it) }
         binding.button.setOnClickListener {
             binding.textView.text = spisok.reduce { acc, c -> acc + c + "\n"  }
         }
